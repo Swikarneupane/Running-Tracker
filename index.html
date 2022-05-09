@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Running Tracker</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="logo">
+                <img src="./runner.svg" />
+            </div>
+            <form>
+                <label for="entry">Number of miles today</label>
+                <br />
+                <input type="number" id="entry" step="0.1" />
+                <br />
+                <button type="submit">Add</button>
+            </form>
+        </section>  
+        
+        <hr>
+
+        <section class="entriesWrapper">
+                <h3>Last 7 days</h3>
+                <ul id="entries">
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                </ul>
+        </section>
+        <section class="data">    
+            <div>
+                <p>Total</p>
+                <span id="total"></span>
+            </div>
+            <div>
+                <p>Average distance</p>
+                <span id="average"></span>
+            </div>
+            <div>
+                <p>This weeks high:</p>
+                <span id="high"></span>
+            </div>
+        </section>
+        <section class="progress">
+            <h3>Weekly target: <span id="progressTotal"></span>/<span id="target"></span> miles</h3>
+            <div class="progressCircleWrapper">
+                <div class="progressCircle">
+                    <div class="progressCenter"></div>
+                </div>
+            </div>
+        </section>    
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
